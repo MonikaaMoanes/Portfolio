@@ -28,11 +28,3 @@ CSS3
 
 JavaScript (Vanilla JS)
 
-Author
-
-Monika Moanes
-📧 Email
-
-💼 LinkedIn
-
-💻 GitHub
