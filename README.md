@@ -1,18 +1,24 @@
 # My Portfolio
 
-This is my personal portfolio website showcasing my projects, skills, and contact information. Built with HTML, CSS, and JavaScript.
+This is my personal portfolio website showcasing my projects, skills, work experience, and contact information. Built with HTML, CSS, and JavaScript.
 
 ## Features
 - Dynamic greeting based on time of day
 - Resume download button
 - Embedded YouTube video
+- Projects section with mobile and web apps
 - Responsive design for desktop and mobile
 
 ## Usage
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/MonikaaMoanes/my-portfolio.git
-Open index.html in your browser.
+
+### Clone the repository
+```bash
+git clone https://github.com/MonikaaMoanes/Portfolio.git
+Then open index.html in your browser.
+
+View live portfolio
+
+https://monikaamoanes.github.io/Portfolio/
 
 Technologies Used
 
@@ -25,6 +31,8 @@ JavaScript (Vanilla JS)
 Author
 
 Monika Moanes
-Email
- | LinkedIn
- | GitHub
+📧 Email
+
+💼 LinkedIn
+
+💻 GitHub
