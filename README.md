@@ -11,7 +11,7 @@ This is my personal portfolio website showcasing my projects, skills, and contac
 ## Usage
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/my-portfolio.git
+   git clone https://github.com/MonikaaMoanes/my-portfolio.git
 Open index.html in your browser.
 
 Technologies Used
