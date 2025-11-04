@@ -180,7 +180,9 @@ a:hover {
   margin-bottom: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
+.video-link button:hover {
+  background-color: #457b9d;
+}
 .video-link button {
   background-color: #1d3557;
   color: white;
@@ -192,9 +194,6 @@ a:hover {
   transition: background-color 0.3s;
 }
 
-.video-link button:hover {
-  background-color: #457b9d;
-}
 
 
 
