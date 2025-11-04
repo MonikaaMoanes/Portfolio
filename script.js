@@ -17,7 +17,6 @@ greetingElement.style.color = '#1d3557';
 greetingElement.style.marginTop = '10px';
 
 document.querySelector('.container').prepend(greetingElement);
-// Smooth scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -26,7 +25,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
-// Download Resume
 document.getElementById("resumeBtn").addEventListener("click", () => {
   window.open("Monika_Moanes_Resume.pdf", "_blank");
 });

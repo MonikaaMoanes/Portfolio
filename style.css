@@ -87,7 +87,39 @@ a:hover {
 .project:hover {
   transform: translateY(-3px);
 }
+.education {
+  margin-top: 40px;
+}
 
+.education h3 {
+  font-size: 1.4rem;
+  color: #1d3557;
+  margin-bottom: 15px;
+}
+.edu-card {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-3px);
+}
+
+.edu-card h4 {
+  color: #003049;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.edu-card p {
+  margin: 5px 0;
+  color: #0d1b2a;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 .contact p {
   margin: 5px 0;
   color: #0d1b2a;
