@@ -193,6 +193,56 @@ a:hover {
   font-size: 1rem;
   transition: background-color 0.3s;
 }
+/* ===== Contact Form ===== */
+.contact h4 {
+  margin-top: 20px;
+  color: #1d3557;
+  font-size: 1.2rem;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #1d3557;
+  box-shadow: 0 0 5px rgba(29, 53, 87, 0.3);
+}
+
+#contactForm textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+#contactForm button {
+  align-self: flex-start;
+  padding: 12px 25px;
+  background-color: #1d3557;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contactForm button:hover {
+  background-color: #457b9d;
+}
 
 
 
