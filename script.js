@@ -1,56 +1,25 @@
-// =====================
-// Dynamic Greeting
-// =====================
-const greetingElement = document.createElement('h3');
-const hour = new Date().getHours();
-let greetingText = '';
-
-if (hour < 12) {
-  greetingText = '☀️ Good Morning!';
-} else if (hour < 18) {
-  greetingText = '🌤️ Good Afternoon!';
-} else {
-  greetingText = '🌙 Good Evening!';
-}
-
-greetingElement.textContent = greetingText;
-greetingElement.style.textAlign = 'center';
-greetingElement.style.color = '#1d3557';
-greetingElement.style.marginTop = '10px';
-
-document.querySelector('.container').prepend(greetingElement);
-
-// =====================
-// Smooth Scrolling
-// =====================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+// ✨ Fade-in on Scroll
+const fadeElems = document.querySelectorAll(".fade-in");
+window.addEventListener("scroll", () => {
+  fadeElems.forEach((el) => {
+    const rect = el.getBoundingClientRect().top;
+    if (rect < window.innerHeight - 100) el.classList.add("visible");
   });
 });
 
-// =====================
-// Resume Button
-// =====================
+// 📄 Resume Button
 document.getElementById("resumeBtn").addEventListener("click", () => {
   window.open("Monika_Moanes_Resume.pdf", "_blank");
 });
 
-// =====================
-// Contact Form Submission
-// =====================
+// ✉️ Contact Form  using DOM
 const contactForm = document.getElementById("contactForm");
-
 if (contactForm) {
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    const name = document.querySelector("#name").value;
-    const email = document.querySelector("#email").value;
-    const message = document.querySelector("#message").value;
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
 
     try {
       const response = await fetch("http://localhost:5000/contact", {
@@ -61,12 +30,12 @@ if (contactForm) {
 
       const result = await response.json();
       alert(result.message);
-      e.target.reset(); 
-    } catch (error) {
-      console.error(error);
+      e.target.reset();
+    } catch (err) {
       alert("Failed to send message. Please try again later.");
     }
   });
 }
+
 
 

@@ -3,105 +3,230 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My Portfolio</title>
+    <title>Monika Moanes | Personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div class="container">
+    <!-- Floating Tech Icons -->
+    <div class="floating-icons">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        alt="JS"
+        class="float-icon"
+      />
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        alt="React"
+        class="float-icon"
+      />
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        alt="Node"
+        class="float-icon"
+      />
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        alt="GitHub"
+        class="float-icon"
+      />
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- 🌷 Navigation Bar -->
+    <nav class="navbar">
+      <h2 class="logo">Portfolio</h2>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+        <li><a href="#work">Work Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container" id="home">
       <h1>👋 Hi, I'm Monika Moanes</h1>
-      <h2>Software Engineer | Full-Stack & Mobile Developer</h2>
-      <p class="tagline">
-        Passionate about building clean, scalable web and mobile applications
-        with React, Node.js, and modern JavaScript.
+      <h2>Software Engineering Graduate | Full-Stack & Mobile Developer</h2>
+    </div>
+
+    <!-- 💕 About Section -->
+    <section id="about" class="fade-in">
+      <h3>About Me</h3>
+      <p>
+        I'm a Software Engineering graduate from Concordia University with hands
+        on experience in full-stack JavaScript and mobile development. I love
+        turning ideas into impactful applications and working in collaborative,
+        fast paced environments.
+      </p>
+    </section>
+
+    <!-- 💡 Projects Section -->
+    <section id="projects" class="fade-in">
+      <h3>Portfolio</h3>
+
+      <div class="project">
+        <h4>🏋️‍♀️ Sports Mobile App</h4>
+        <p>
+          Cross-platform React Native app with Redux for state management,
+          improving performance and usability across Android & iOS.
+        </p>
+        <div class="links">
+          <button
+            onclick="window.open('https://www.youtube.com/watch?v=4d0tcheM6pI', '_blank')"
+          >
+            ▶️ Live Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="project">
+        <h4>🏢 Condo Management System</h4>
+        <p>
+          Full-stack responsive web app using React, Tailwind CSS, and Node.js.
+          Designed secure CRUD functionality for residents and admins.
+        </p>
+      </div>
+
+      <div class="project">
+        <h4>📝 Attendance Tracker</h4>
+        <p>
+          Real-time attendance tracking web app for Saint Mary Church events
+          using JavaScript and Firebase Firestore. Users can add names, mark
+          present, and remove entries live.
+        </p>
+        <div class="links">
+          <button
+            onclick="window.open('https://attendanceapp-fae64.web.app', '_blank')"
+          >
+            🌐 Live Demo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🤝 Volunteer Experience -->
+    <section id="volunteer" class="fade-in">
+      <h3>Volunteer Experience</h3>
+      <div class="volunteer-item">
+        <h4>Events Coordinator Volunteer | Saint Mary Church</h4>
+        <p>Toronto, ON | Jan 2024 – Present</p>
+        <ul>
+          <li>
+            Coordinated and managed community events for over 100 attendees.
+          </li>
+          <li>
+            Developed and maintained a dynamic dashboard website for tracking
+            attendance and event updates in real-time.
+          </li>
+          <li>
+            Implemented functionality to add new events, update existing events,
+            and mark attendee participation efficiently.
+          </li>
+          <li>
+            Collaborated with church committees to improve event planning,
+            outreach, and community engagement.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 💼 Work Experience -->
+    <section id="work" class="fade-in">
+      <h3>Work Experience</h3>
+
+      <div class="job-item">
+        <h4>
+          Software Engineer Research Assistant Intern | Healthcare System R&A
+        </h4>
+        <p>Waterloo, ON | Sep 2024 – Dec 2024</p>
+        <ul>
+          <li>
+            Engineered mobile interfaces in Android Studio (Java) for real-time
+            data visualization.
+          </li>
+          <li>
+            Automated data pipelines using Python and SQL, reducing processing
+            time by 40%.
+          </li>
+          <li>
+            Conducted model validation, improving predictive model accuracy from
+            78% to 85%.
+          </li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <h4>Full Stack Web Developer Intern | Consoltec FlowFit</h4>
+        <p>Montreal, QC | Sep 2022 – Dec 2022</p>
+        <ul>
+          <li>
+            Optimized .NET APIs and SQL queries, reducing backend response time
+            from 2.5s to 0.9s.
+          </li>
+          <li>
+            Built and deployed React dashboards on AWS for real-time enterprise
+            analytics.
+          </li>
+          <li>
+            Collaborated in Agile/Scrum to deliver product features on schedule.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ✉️ Contact -->
+    <section id="contact" class="contact fade-in">
+      <h3>Contact</h3>
+      <p>📍 Toronto, ON, Canada</p>
+      <p>📞 <a href="tel:+14387783428">(438) 778-3428</a></p>
+      <p>
+        📧 <a href="mailto:monicanasser6@gmail.com">monicanasser6@gmail.com</a>
+      </p>
+      <p>
+        💼
+        <a href="https://www.linkedin.com/in/monicanasser/" target="_blank"
+          >LinkedIn Profile</a
+        >
       </p>
 
-      <section class="about">
-        <h3>About Me</h3>
-        <p>
-          I'm a Software Engineering graduate from Concordia University with
-          hands-on experience in full-stack JavaScript and mobile development. I
-          love turning ideas into impactful applications and working in
-          collaborative, fast-paced environments.
-        </p>
-      </section>
+      <h4>Send me a message</h4>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-          <h4>🏋️‍♀️ Sports Mobile App</h4>
-          <p>
-            Cross-platform React Native app with Redux for state management,
-            improving performance and usability across Android & iOS.
-          </p>
+    <!-- 📄 Resume -->
+    <section class="resume fade-in">
+      <h3>Resume</h3>
+      <button id="resumeBtn">📄 Download My Resume</button>
+    </section>
 
-          <!-- 🎥 YouTube link preview -->
-          <div class="video-link">
-            <img
-              src="https://img.youtube.com/vi/4d0tcheM6pI/0.jpg"
-              alt="Sports App Demo Thumbnail"
-            />
-            <button
-              onclick="window.open('https://www.youtube.com/watch?v=4d0tcheM6pI', '_blank')"
-            >
-              ▶️ Watch Live Demo
-            </button>
-          </div>
-        </div>
+    <p class="footer">Made with 💖 by Monika — 2025</p>
 
-        <div class="project">
-          <h4>🏢 Condo Management System</h4>
-          <p>
-            Full-stack responsive web app using React, Tailwind CSS, and
-            Node.js. Designed secure CRUD functionality for residents and
-            admins.
-          </p>
-        </div>
-      </section>
-      <section class="education">
-        <h3>Education</h3>
-        <p>
-          🎓 <strong>Concordia University</strong> — Bachelor of Engineering in
-          Software Engineering
-          <br />
-          📅 Graduated: June 2025
-          <br />
-          📍 Montreal, QC, Canada
-        </p>
-      </section>
-
-      <section class="contact">
-        <h3>Contact</h3>
-        <p>📍 Toronto, ON, Canada</p>
-        <p>📞 <a href="tel:+14387783428">(438) 778-3428</a></p>
-        <p>
-          📧
-          <a href="mailto:monicanasser6@gmail.com">monicanasser6@gmail.com</a>
-        </p>
-        <p>
-          💼
-          <a href="https://www.linkedin.com/in/monicanasser/" target="_blank"
-            >LinkedIn Profile</a
-          >
-        </p>
-
-        <h4>Send me a message</h4>
-        <form id="contactForm">
-          <input type="text" id="name" placeholder="Your Name" required />
-          <input type="email" id="email" placeholder="Your Email" required />
-          <textarea id="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-
-      <section class="resume">
-        <h3>Resume</h3>
-        <button id="resumeBtn">📄 Download My Resume</button>
-      </section>
-
-      <p class="footer">More to come... 🚀</p>
-    </div>
     <script src="script.js"></script>
+    <script>
+      // Fade-in on scroll
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+      const appearOnScroll = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      appearOptions);
+      faders.forEach((fader) => appearOnScroll.observe(fader));
+    </script>
   </body>
 </html>
