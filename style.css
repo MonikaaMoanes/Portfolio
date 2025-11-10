@@ -137,6 +137,91 @@ section h3 {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 8px 20px rgba(138, 79, 255, 0.3);
 }
+/* 🤝 Volunteer Experience Cards */
+.volunteer-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.volunteer-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(138, 79, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(138, 79, 255, 0.25);
+}
+
+.volunteer-card h4 {
+  font-size: 1.3rem;
+  color: #4a148c;
+  margin-bottom: 5px;
+}
+
+.volunteer-card .organization {
+  font-weight: 500;
+  color: #6a1b9a;
+}
+
+.volunteer-card .date {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.volunteer-card .description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 💼 Work Experience Cards */
+.work-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.work-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(138, 79, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(138, 79, 255, 0.25);
+}
+
+.work-card h4 {
+  font-size: 1.3rem;
+  color: #4a148c;
+  margin-bottom: 5px;
+}
+
+.work-card .company {
+  font-weight: 500;
+  color: #6a1b9a;
+}
+
+.work-card .date {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.work-card .description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
 
 /* 💌 Contact Form */
 #contactForm input,
