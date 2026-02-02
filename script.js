@@ -1,41 +1,76 @@
-// ✨ Fade-in on Scroll
-const fadeElems = document.querySelectorAll(".fade-in");
+// Year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// EmailJS init (PUBLIC KEY only)
+emailjs.init("i14Kk5_XUOYyYpYtT");
+
+// Fade-in on scroll
+const faders = document.querySelectorAll(".fade-in");
+const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -60px 0px" };
+
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("visible");
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach((fader) => appearOnScroll.observe(fader));
+
+// Mobile menu
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn?.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(isOpen));
+});
+
+navLinks?.querySelectorAll("a").forEach((a) => {
+  a.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  });
+});
+
+// Scroll progress bar
+const progress = document.querySelector(".scroll-progress");
 window.addEventListener("scroll", () => {
-  fadeElems.forEach((el) => {
-    const rect = el.getBoundingClientRect().top;
-    if (rect < window.innerHeight - 100) el.classList.add("visible");
-  });
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progress.style.width = `${pct}%`;
 });
 
-// 📄 Resume Button
-document.getElementById("resumeBtn").addEventListener("click", () => {
-  window.open("Monika_Moanes_Resume.pdf", "_blank");
+// Contact form (EmailJS)
+document.getElementById("contactForm")?.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const btn = this.querySelector('button[type="submit"]');
+  const oldText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "Sending...";
+
+  emailjs
+    .sendForm("service_0knzebc", "template_lars4w3", this)
+    .then(() => {
+      alert("✅ Message sent successfully!");
+      this.reset();
+    })
+    .catch((error) => {
+      console.error("EmailJS error:", error);
+      alert("❌ Could not send message. " + (error?.text || ""));
+    })
+    .finally(() => {
+      btn.disabled = false;
+      btn.textContent = oldText;
+    });
 });
 
-// ✉️ Contact Form  using DOM
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-  contactForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const message = e.target.message.value;
 
-    try {
-      const response = await fetch("http://localhost:5000/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-      });
 
-      const result = await response.json();
-      alert(result.message);
-      e.target.reset();
-    } catch (err) {
-      alert("Failed to send message. Please try again later.");
-    }
-  });
-}
+
 
 
 

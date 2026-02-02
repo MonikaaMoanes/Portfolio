@@ -1,291 +1,562 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monika Moanes | Personal Portfolio</title>
+    <title>Monika Moanes | Software Engineering Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <meta
+      name="description"
+      content="Monika Moanes — Software Engineering Graduate. Full Stack Developer building SaaS apps, APIs, and modern web experiences."
+    />
   </head>
+
   <body>
-    <!-- 🌐 Floating Social Media -->
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/monicanasser/" target="_blank">
-        <img
-          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-          alt="LinkedIn"
-        />
-      </a>
+    <!-- Top progress glow -->
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-      <a href="https://github.com/MonikaaMoanes" target="_blank">
-        <img
-          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
-          alt="Github"
-        />
+    <!-- Floating Social -->
+    <div class="social-icons" aria-label="Social links">
+      <a
+        href="https://www.linkedin.com/in/monicanasser/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i class="fa-brands fa-linkedin"></i
+        ><span class="sr-only">LinkedIn</span>
       </a>
-
-      <a href="https://www.instagram.com/" target="_blank">
-        <img
-          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-          alt="Instagram"
-        />
+      <a
+        href="https://github.com/MonikaaMoanes"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span>
       </a>
-
-      <a href="https://www.facebook.com/" target="_blank">
-        <img
-          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-          alt="Facebook"
-        />
+      <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+        <i class="fa-brands fa-instagram"></i
+        ><span class="sr-only">Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+        <i class="fa-brands fa-facebook"></i
+        ><span class="sr-only">Facebook</span>
       </a>
     </div>
 
-    <!-- 🌷 Navigation Bar -->
-    <nav class="navbar">
-      <h2 class="logo">Portfolio</h2>
-      <ul class="nav-links">
-        <li>
-          <a href="#home"><i class="fas fa-home"></i> Home</a>
-        </li>
-        <li>
-          <a href="#about"><i class="fas fa-user"></i> About</a>
-        </li>
-        <li>
-          <a href="#projects"><i class="fas fa-briefcase"></i> Projects</a>
-        </li>
-        <li>
-          <a href="#volunteer"
-            ><i class="fas fa-hand-holding-heart"></i> Volunteer</a
-          >
-        </li>
-        <li>
-          <a href="#work"><i class="fas fa-building"></i> Work</a>
-        </li>
-        <li>
-          <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <!-- Navbar -->
+    <header class="header">
+      <nav class="navbar">
+        <a class="logo" href="#home">
+          <span class="logo-dot"></span>
+          <span>Monika</span>
+          <span class="muted">Moanes</span>
+        </a>
 
-    <!-- Main Container -->
-    <div class="hero" id="home">
-      <div class="hero-text">
-        <h1>👋 Hi, I'm Monika Moanes</h1>
-        <h2>Software Engineering Graduate | Full-Stack Developer</h2>
-      </div>
-
-      <div class="cube-container">
-        <div class="cube">
-          <div class="side">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            />
-          </div>
-          <div class="side">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-            />
-          </div>
-          <div class="side">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-            />
-          </div>
-          <div class="side">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-            />
-          </div>
-          <div class="side">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-            />
-          </div>
-          <div class="side">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 💕 About Section -->
-    <section id="about" class="fade-in">
-      <h3>About Me</h3>
-      <p>
-        I'm a Software Engineering graduate from Concordia University with hands
-        on experience in full-stack JavaScript and mobile development. I love
-        turning ideas into impactful applications and working in collaborative,
-        fast paced environments.
-      </p>
-    </section>
-
-    <!-- 💡 Projects Section -->
-    <section id="projects" class="fade-in">
-      <h3>Projects</h3>
-      <div class="project">
-        <h4>🏥 Renal Bloom Center Website</h4>
-        <p>
-          Full-stack medical website built with React, Tailwind CSS, Node.js,
-          and Express. Features include Doctors & Services pages, multilingual
-          support, appointment booking, and a contact form.
-        </p>
-        <div class="links">
-          <button
-            onclick="window.open('https://monikaamoanes.github.io/renal-bloom-website/', '_blank')"
-          >
-            🌐 Live Demo
-          </button>
-          <button
-            onclick="window.open('https://github.com/MonikaaMoanes/renal-bloom-website', '_blank')"
-          >
-            💻 GitHub
-          </button>
-        </div>
-      </div>
-
-      <div class="project">
-        <h4>🏋️‍♀️ Sports Mobile App</h4>
-        <p>
-          Cross-platform fitness app built with React Native and Redux, enabling
-          smooth performance and consistent UX on Android and iOS.
-        </p>
-        <div class="links">
-          <button
-            onclick="window.open('https://www.youtube.com/watch?v=4d0tcheM6pI', '_blank')"
-          >
-            ▶️ Live Demo
-          </button>
-        </div>
-      </div>
-
-      <div class="project">
-        <h4>🏢 Condo Management System</h4>
-        <p>
-          Full-stack web app using React, Tailwind CSS, and Node.js with secure
-          CRUD operations for residents and admins to manage properties
-          efficiently.
-        </p>
-      </div>
-
-      <div class="project">
-        <h4>📝 Attendance Tracker</h4>
-        <p>
-          Real-time attendance tracking web app for Saint Mary Church events
-          using JavaScript and Firebase Firestore. Users can add names, mark
-          present, and remove entries live.
-        </p>
-        <div class="links">
-          <button
-            onclick="window.open('https://attendanceapp-fae64.web.app', '_blank')"
-          >
-            🌐 Live Demo
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- 🤝 Volunteer Experience -->
-    <section id="volunteer" class="fade-in">
-      <h3>Volunteer Experience</h3>
-
-      <div class="volunteer-cards">
-        <div class="volunteer-card">
-          <h4>Events Coordinator Volunteer</h4>
-          <p class="organization">Saint Mary Church | Egypt</p>
-          <p class="date">Jan 2024 – Present</p>
-          <p class="description">
-            Organized community events for 100+ attendees and built a real-time
-            dashboard for tracking attendance and event updates. Collaborated
-            with church committees to enhance planning and community engagement.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 💼 Work Experience -->
-    <section id="work" class="fade-in">
-      <h3>Work Experience</h3>
-
-      <div class="work-cards">
-        <div class="work-card">
-          <h4>Software Engineer Research Assistant Intern</h4>
-          <p class="company">Healthcare System R&A | Waterloo, ON</p>
-          <p class="date">Sep 2024 – Dec 2024</p>
-          <p class="description">
-            Contributed to healthcare research by developing Android interfaces
-            in Java, automating data workflows in Python and SQL, and improving
-            model accuracy.
-          </p>
-        </div>
-
-        <div class="work-card">
-          <h4>Full Stack Web Developer Intern</h4>
-          <p class="company">Consoltec FlowFit | Montreal, QC</p>
-          <p class="date">Sep 2022 – Dec 2022</p>
-          <p class="description">
-            Built and optimized web dashboards using React, .NET, and SQL.
-            Deployed scalable analytics tools on AWS and collaborated in Agile
-            teams.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ✉️ Contact -->
-    <section id="contact" class="contact fade-in">
-      <h3>Contact</h3>
-      <p>📍 Toronto, ON, Canada</p>
-      <p>📞 <a href="tel:+14387783428">(438) 778-3428</a></p>
-      <p>
-        📧 <a href="mailto:monicanasser6@gmail.com">monicanasser6@gmail.com</a>
-      </p>
-      <p>
-        💼
-        <a href="https://www.linkedin.com/in/monicanasser/" target="_blank"
-          >LinkedIn Profile</a
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
         >
-      </p>
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
-      <h4>Send me a message</h4>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+          </li>
+          <li>
+            <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+          </li>
+          <li>
+            <a href="#projects"><i class="fas fa-briefcase"></i> Projects</a>
+          </li>
+          <li>
+            <a href="#volunteer"
+              ><i class="fas fa-hand-holding-heart"></i> Volunteer</a
+            >
+          </li>
+          <li>
+            <a href="#work"><i class="fas fa-building"></i> Work</a>
+          </li>
+          <li>
+            <a class="pill" href="#contact"
+              ><i class="fas fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- 📄 Resume -->
-    <section class="resume fade-in">
-      <h3>Resume</h3>
-      <a href="Monika_Moanes_Resume.pdf" download>
-        <button>📄 Download My Resume</button>
-      </a>
-    </section>
+    <!-- Hero -->
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-inner">
+          <div class="hero-text fade-in">
+            <p class="kicker">Software Engineering Graduate • Toronto, ON</p>
+            <h1>
+              Building <span class="grad">SaaS products</span>, APIs, and modern
+              web experiences.
+            </h1>
 
-    <p class="footer">Made with 💖 by Monika — 2025</p>
+            <p class="sub">
+              Hi, I’m <strong>Monika Moanes</strong> — a full-stack developer
+              who enjoys clean UI, scalable backends, and shipping real features
+              fast.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#projects">
+                View Projects <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a class="btn ghost" href="Monika_Moanes_Resume.pdf" download>
+                Download Resume <i class="fa-regular fa-file-lines"></i>
+              </a>
+            </div>
+
+            <div class="quick-stats">
+              <div class="stat">
+                <div class="stat-num">4+</div>
+                <div class="stat-label">Projects shipped</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">JS / Node</div>
+                <div class="stat-label">APIs & full stack</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">Agile</div>
+                <div class="stat-label">Team collaboration</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech orb -->
+          <div class="hero-visual fade-in" aria-hidden="true">
+            <div class="orb">
+              <div class="orb-ring"></div>
+              <div class="tech-grid">
+                <div class="tech">
+                  <img
+                    alt="JavaScript"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  />
+                </div>
+                <div class="tech">
+                  <img
+                    alt="React"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  />
+                </div>
+                <div class="tech">
+                  <img
+                    alt="Node.js"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  />
+                </div>
+                <div class="tech">
+                  <img
+                    alt="GitHub"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                  />
+                </div>
+                <div class="tech">
+                  <img
+                    alt="HTML5"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  />
+                </div>
+                <div class="tech">
+                  <img
+                    alt="CSS3"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-hint" href="#about" aria-label="Scroll to About">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section fade-in">
+        <div class="section-head">
+          <h2>About</h2>
+          <p>Quick snapshot of who I am and what I build.</p>
+        </div>
+        <div class="card">
+          <p>
+            I’m a Software Engineering graduate from
+            <strong>Concordia University</strong> with hands-on experience in
+            full-stack JavaScript and mobile development. I love turning ideas
+            into impactful applications, collaborating in fast-paced teams, and
+            continuously learning.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section fade-in">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p>Tools and technologies I’ve used to ship real projects.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3><i class="fa-solid fa-layer-group"></i> Frontend</h3>
+            <div class="chips">
+              <span class="chip">React</span>
+              <span class="chip">React Native</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS</span>
+              <span class="chip">Tailwind</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3><i class="fa-solid fa-server"></i> Backend</h3>
+            <div class="chips">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">.NET / C#</span>
+              <span class="chip">JWT Auth</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3><i class="fa-solid fa-cloud"></i> Data & Tools</h3>
+            <div class="chips">
+              <span class="chip">SQL</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">Firebase</span>
+              <span class="chip">Git / GitHub</span>
+              <span class="chip">Docker</span>
+              <span class="chip">AWS/Azure (Exposure)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section fade-in">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p>
+            Selected work — focused on clean UI, real features, and scalable
+            APIs.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Renal Bloom -->
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <h3>Renal Bloom Center Website</h3>
+                <p class="project-sub">
+                  Healthcare SaaS-style website with multilingual UI + booking
+                  flow.
+                </p>
+              </div>
+              <span class="badge">Featured</span>
+            </div>
+
+            <div class="chips">
+              <span class="chip">React</span>
+              <span class="chip">Tailwind</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Express</span>
+              <span class="chip">i18n</span>
+            </div>
+
+            <ul class="bullets">
+              <li>
+                Built services, doctors, and contact flows with a clean
+                responsive UI.
+              </li>
+              <li>
+                Implemented multilingual support + appointment booking
+                experience.
+              </li>
+              <li>
+                Structured pages for clarity and fast navigation (product-like
+                UX).
+              </li>
+            </ul>
+
+            <div class="actions">
+              <a
+                class="btn small primary"
+                href="https://monikaamoanes.github.io/renal-bloom-website/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a
+                class="btn small ghost"
+                href="https://github.com/MonikaaMoanes/renal-bloom-website"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Code <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Sports Mobile App -->
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <h3>Sports Mobile App</h3>
+                <p class="project-sub">
+                  Cross-platform fitness app with a consistent UX on
+                  iOS/Android.
+                </p>
+              </div>
+            </div>
+
+            <div class="chips">
+              <span class="chip">React Native</span>
+              <span class="chip">Redux</span>
+              <span class="chip">Mobile UX</span>
+            </div>
+
+            <ul class="bullets">
+              <li>
+                Built core mobile screens and state management for a smooth user
+                flow.
+              </li>
+              <li>
+                Collaborated in a team environment with regular reviews and
+                feedback.
+              </li>
+            </ul>
+
+            <div class="actions">
+              <a
+                class="btn small primary"
+                href="https://www.youtube.com/watch?v=4d0tcheM6pI"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Demo <i class="fa-solid fa-play"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Condo Management -->
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <h3>Condo Management System</h3>
+                <p class="project-sub">
+                  Admin + resident workflows with secure CRUD operations.
+                </p>
+              </div>
+            </div>
+
+            <div class="chips">
+              <span class="chip">React</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Tailwind</span>
+              <span class="chip">CRUD</span>
+            </div>
+
+            <ul class="bullets">
+              <li>
+                Created responsive dashboard UI and structured data operations.
+              </li>
+              <li>Designed roles-based flows for residents and admins.</li>
+            </ul>
+          </article>
+
+          <!-- Attendance -->
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <h3>Attendance Tracker</h3>
+                <p class="project-sub">
+                  Real-time attendance dashboard for community events.
+                </p>
+              </div>
+            </div>
+
+            <div class="chips">
+              <span class="chip">JavaScript</span>
+              <span class="chip">Firebase</span>
+              <span class="chip">Firestore</span>
+              <span class="chip">Realtime</span>
+            </div>
+
+            <ul class="bullets">
+              <li>
+                Built add / remove / present flows with live updates via
+                Firestore.
+              </li>
+              <li>
+                Used for tracking attendance during Saint Mary Church events.
+              </li>
+            </ul>
+
+            <div class="actions">
+              <a
+                class="btn small primary"
+                href="https://attendanceapp-fae64.web.app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Volunteer -->
+      <section id="volunteer" class="section fade-in">
+        <div class="section-head">
+          <h2>Volunteer</h2>
+          <p>Community work that also strengthened my product thinking.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Events Coordinator Volunteer</h3>
+            <p class="meta">Saint Mary Church • Egypt • Jan 2024 – Present</p>
+            <p>
+              Organized community events for 100+ attendees and built a
+              real-time dashboard to track attendance and event updates.
+              Collaborated with committees to improve planning and engagement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section id="work" class="section fade-in">
+        <div class="section-head">
+          <h2>Work</h2>
+          <p>Hands-on experience from internships and research.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Software Engineer Research Assistant Intern</h3>
+            <p class="meta">
+              Healthcare System R&A • Waterloo, ON • Sep 2024 – Dec 2024
+            </p>
+            <p>
+              Developed Android interfaces in Java, automated data workflows
+              using Python and SQL, and contributed to improvements in model
+              accuracy.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Full Stack Web Developer Intern</h3>
+            <p class="meta">
+              Consoltec FlowFit • Montreal, QC • Sep 2022 – Dec 2022
+            </p>
+            <p>
+              Built and optimized dashboards using React, .NET, and SQL.
+              Supported deployments and collaborated in Agile teams.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact fade-in">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Let’s connect — I’m open to junior roles.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <p><i class="fa-solid fa-location-dot"></i> Toronto, ON, Canada</p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+14387783428">(438) 778-3428</a>
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:monicanasser6@gmail.com"
+                >monicanasser6@gmail.com</a
+              >
+            </p>
+            <p>
+              <i class="fa-brands fa-linkedin"></i>
+              <a
+                href="https://www.linkedin.com/in/monicanasser/"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Send me a message</h3>
+            <form id="contactForm">
+              <label class="sr-only" for="name">Name</label>
+              <input type="text" id="name" placeholder="Your Name" required />
+
+              <label class="sr-only" for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+
+              <label class="sr-only" for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+
+              <button class="btn primary" type="submit">
+                Send <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <p class="tiny muted"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>
+          Made with <span aria-hidden="true">💖</span> by Monika •
+          <span id="year"></span>
+        </p>
+      </footer>
+    </main>
 
     <script src="script.js"></script>
-    <script>
-      // Fade-in on scroll
-      const faders = document.querySelectorAll(".fade-in");
-      const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-      const appearOnScroll = new IntersectionObserver(function (
-        entries,
-        observer
-      ) {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        });
-      },
-      appearOptions);
-      faders.forEach((fader) => appearOnScroll.observe(fader));
-    </script>
   </body>
 </html>
